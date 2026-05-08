@@ -173,6 +173,45 @@
 
     .step-text strong { color: #e2e8f0; }
 
+    /* ── Exercise divider ── */
+    .exercise-divider {
+      text-align: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #334155;
+      margin: 1rem 0 0;
+      padding: 1.5rem 0 0;
+      border-top: 1px solid #1e293b;
+    }
+
+    .exercise-divider span {
+      background: #6366f1;
+      color: #fff;
+      padding: 0.25rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.68rem;
+    }
+
+    /* ── CTF card ── */
+    .ctf .card-header { background: #0f1f1a; color: #34d399; }
+    .ctf .step-num { background: #0f2d20; color: #34d399; }
+
+    .ctf-link {
+      display: inline-block;
+      background: #0f2d20;
+      color: #34d399;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-bottom: 1.2rem;
+      word-break: break-all;
+    }
+    .ctf-link:hover { background: #163d2a; }
+
     /* ── Divider ── */
     .vs-divider {
       text-align: center;
@@ -305,6 +344,57 @@
           <li>
             <span class="step-num">5</span>
             <span class="step-text"><strong>Multi-turn context manipulation</strong> — build rapport across several messages before slipping in the extraction attempt.</span>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- ── Exercise 2 divider ── -->
+    <div class="exercise-divider"><span>Exercise 2</span></div>
+
+    <!-- ── CTF: Tool Extraction ── -->
+    <div class="card ctf">
+      <div class="card-header">🚩 LLM Prompt Injection &amp; Tool Extraction — CTF</div>
+      <div class="card-body">
+
+        <div class="task-meta">
+          <span class="chip chip-time">⏱ 30 minutes</span>
+        </div>
+
+        <p class="task-objective">
+          Gain hands-on experience identifying and exploiting prompt injection vulnerabilities in
+          Large Language Models, with a specific focus on forcing the model to reveal its underlying
+          <strong>tool specifications</strong> or system instructions.
+        </p>
+
+        <p class="task-objective">
+          You are analyzing a target application that uses an LLM-based agent configured with a set
+          of "tools" (API definitions). Your mission: use prompt injection techniques to bypass the
+          model's instructions and exfiltrate the full definition of its
+          <strong>"Product Recommendation Tool."</strong>
+        </p>
+
+        <a class="ctf-link" href="https://gandalf.lakera.ai/agent-breaker/product_recommendation_tool_extraction" target="_blank" rel="noopener">
+          🔗 gandalf.lakera.ai — Open Target Application
+        </a>
+
+        <ul class="steps">
+          <li>
+            <span class="step-num">1</span>
+            <span class="step-text"><strong>Level 1 Access</strong> — Start at Level 1. This level has minimal defenses.</span>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <span class="step-text"><strong>Formulate prompts</strong> — Interact with the chat interface and craft a prompt that tricks the model into ignoring its instructions and printing the full spec of the "Product Recommendation Tool."</span>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <span class="step-text"><strong>Advance levels</strong> — Progression is automatic. Level 2 and beyond introduce defense mechanisms such as input filtering and system-level adversarial safety checks. Refine your prompts to bypass them.</span>
+          </li>
+          <li>
+            <span class="step-num">4</span>
+            <span class="step-text"><strong>Winning criteria</strong> — The team that unlocks the highest level within the allotted time wins.</span>
           </li>
         </ul>
 
