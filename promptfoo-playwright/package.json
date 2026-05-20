@@ -1,0 +1,8 @@
+{
+  "name": "promptfoo-playwright-redteam",
+  "version": "1.0.0",
+  "description": "Promptfoo red teaming via Playwright browser automation",
+  "dependencies": {
+    "playwright": "^1.40.0"
+  }
+}

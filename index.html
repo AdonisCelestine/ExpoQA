@@ -406,6 +406,112 @@
 
   </div>
 
+    <!-- ── Exercise 3 divider ── -->
+    <div class="exercise-divider"><span>Exercise 3</span></div>
+
+    <!-- ── Promptfoo Playwright ── -->
+    <div class="card ctf">
+      <div class="card-header">🤖 Automated Red Teaming with Promptfoo + Playwright</div>
+      <div class="card-body">
+
+        <div class="task-meta">
+          <span class="chip chip-time">⏱ 25 minutes</span>
+        </div>
+
+        <p class="task-objective">
+          Use <strong>Promptfoo</strong> with a custom <strong>Playwright</strong> provider to
+          automatically fire adversarial prompts at a <em>real browser-based application</em> and
+          capture its responses for red team evaluation. You will see the browser open and attacks
+          run live.
+        </p>
+
+        <!-- Step 1 -->
+        <div class="persona-label">Step 1 — Clone the exercise files</div>
+        <div class="persona-text">
+          The provider and config are already in the workshop repo. Clone or download them:
+          <br><br>
+          <code style="background:#0a0a14;padding:0.5rem 0.9rem;border-radius:6px;display:block;color:#34d399;font-size:0.88rem;">git clone https://github.com/AdonisCelestine/ExpoQA.git</code>
+          <br>
+          Then navigate into the exercise folder:
+          <br><br>
+          <code style="background:#0a0a14;padding:0.5rem 0.9rem;border-radius:6px;display:block;color:#34d399;font-size:0.88rem;">cd ExpoQA/promptfoo-playwright</code>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="persona-label" style="margin-top:1.2rem;">Step 2 — Install dependencies</div>
+        <div class="persona-text">
+          Install the Node packages and download the Chromium browser:
+          <br><br>
+          <code style="background:#0a0a14;padding:0.5rem 0.9rem;border-radius:6px;display:block;color:#34d399;font-size:0.88rem;">npm install<br>npx playwright install chromium</code>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="persona-label" style="margin-top:1.2rem;">Step 3 — Set your API key</div>
+        <div class="persona-text">
+          Promptfoo uses an LLM to <em>generate</em> the adversarial prompts. Set your own key:
+          <br><br>
+          <code style="background:#0a0a14;padding:0.5rem 0.9rem;border-radius:6px;display:block;color:#34d399;font-size:0.88rem;">export OPENAI_API_KEY=sk-&lt;your-key&gt;</code>
+          <br>
+          <span style="color:#64748b;font-size:0.85rem;">Using Anthropic? Change the key and update the target id in <code style="color:#94a3b8;">promptfooconfig.yaml</code> to <code style="color:#94a3b8;">anthropic:claude-haiku-4-5</code></span>
+          <br><br>
+          <div style="background:#1a1a0a;border:1px solid #ca8a04;border-radius:6px;padding:0.6rem 0.9rem;font-size:0.88rem;color:#fde68a;">
+            ⚠️ <strong>Use your own API key.</strong> Do not share it or commit it to the repo.
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="persona-label" style="margin-top:1.2rem;">Step 4 — Point the provider at your target app</div>
+        <div class="persona-text">
+          Open <code style="color:#94a3b8;">provider_playwright.js</code> and update the selectors at the top to match your target web application:
+          <br><br>
+          <pre style="background:#0a0a14;padding:0.8rem 1rem;border-radius:6px;color:#a5f3fc;font-size:0.82rem;overflow-x:auto;">const WEBSITE_URL       = 'https://your-target-app.com/';
+const CONSENT_BUTTON    = 'button[aria-label="Consent"]';
+const INPUT_SELECTOR    = '#chat-input';
+const RESPONSE_SELECTOR = '.message-completed';</pre>
+          <span style="color:#64748b;font-size:0.85rem;">Use your browser's DevTools (F12 → Inspector) to find the correct CSS selectors for the input field and response container.</span>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="persona-label" style="margin-top:1.2rem;">Step 5 — Run the red team scan</div>
+        <div class="persona-text">
+          <code style="background:#0a0a14;padding:0.5rem 0.9rem;border-radius:6px;display:block;color:#34d399;font-size:0.88rem;">npx promptfoo@latest redteam run</code>
+          <br>
+          A browser window will open. Watch Promptfoo automatically send adversarial prompts — prompt injections, jailbreaks, goal hijacking, PII extraction — and collect each response.
+        </div>
+
+        <!-- Step 6 -->
+        <div class="persona-label" style="margin-top:1.2rem;">Step 6 — View the report</div>
+        <div class="persona-text">
+          When the scan finishes, open the visual report:
+          <br><br>
+          <code style="background:#0a0a14;padding:0.5rem 0.9rem;border-radius:6px;display:block;color:#34d399;font-size:0.88rem;">npx promptfoo@latest redteam report</code>
+        </div>
+
+        <!-- Discussion -->
+        <ul class="steps" style="margin-top:1.4rem;">
+          <li>
+            <span class="step-num" style="background:#0f2d20;color:#34d399;">1</span>
+            <span class="step-text"><strong>Failed probes</strong> — which adversarial prompts did the app fail to block?</span>
+          </li>
+          <li>
+            <span class="step-num" style="background:#0f2d20;color:#34d399;">2</span>
+            <span class="step-text"><strong>Attack categories</strong> — did jailbreaks, prompt injection, or goal hijacking succeed most?</span>
+          </li>
+          <li>
+            <span class="step-num" style="background:#0f2d20;color:#34d399;">3</span>
+            <span class="step-text"><strong>Fix &amp; retest</strong> — harden the system prompt, re-run the scan, compare pass rates before and after.</span>
+          </li>
+          <li>
+            <span class="step-num" style="background:#0f2d20;color:#34d399;">4</span>
+            <span class="step-text"><strong>OWASP link</strong> — map each failure to an OWASP LLM category from the slide deck.</span>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+
   <footer>ExpoQA 2026 &mdash; AI Security Workshop &mdash; github.com/AdonisCelestine/ExpoQA</footer>
 
 </body>
