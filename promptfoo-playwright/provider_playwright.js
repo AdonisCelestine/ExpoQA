@@ -41,7 +41,15 @@ async function waitForStableResponse(page, timeout = 60000) {
  * Receives an adversarial prompt, drives a real browser via Playwright,
  * and returns the chatbot's response for evaluation.
  */
-module.exports = {
+class PlaywrightProvider {
+  constructor(options) {
+    this.config = options?.config ?? {};
+  }
+
+  id() {
+    return 'playwright-provider';
+  }
+
   async callApi(prompt, context, options) {
     const config  = options?.config ?? {};
     const timeout = config.timeout  ?? 60000;
@@ -87,5 +95,7 @@ module.exports = {
     } finally {
       if (browser) await browser.close();
     }
-  },
-};
+  }
+}
+
+module.exports = PlaywrightProvider;

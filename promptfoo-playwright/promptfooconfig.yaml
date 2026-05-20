@@ -17,15 +17,12 @@ redteam:
 
   plugins:
     - hijacking          # Goal hijacking of the agent's objectives
-    - prompt-injection   # Injecting instructions via user input
-    - jailbreak          # Bypassing safety guardrails
     - harmful:hate       # Generating hate speech
-    - pii:direct         # Extracting personally identifiable information
 
   strategies:
     - basic
-    - prompt-injection
     - jailbreak
+    - prompt-injection
 
   language: 'English'
 
