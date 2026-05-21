@@ -474,9 +474,13 @@ const RESPONSE_SELECTOR = '.message-completed';</pre>
         <!-- Step 5 -->
         <div class="persona-label" style="margin-top:1.2rem;">Step 5 — Run the red team scan</div>
         <div class="persona-text">
-          <code style="background:#0a0a14;padding:0.5rem 0.9rem;border-radius:6px;display:block;color:#34d399;font-size:0.88rem;">npx promptfoo@latest redteam run</code>
+          <code style="background:#0a0a14;padding:0.5rem 0.9rem;border-radius:6px;display:block;color:#34d399;font-size:0.88rem;">npm run redteam</code>
           <br>
-          A browser window will open. Watch Promptfoo automatically send adversarial prompts — prompt injections, jailbreaks, goal hijacking, PII extraction — and collect each response.
+          This automatically clears any cached test file and starts a fresh scan. A browser window will open — watch Promptfoo fire adversarial prompts live and collect each response.
+          <br><br>
+          <div style="background:#1a1a0a;border:1px solid #ca8a04;border-radius:6px;padding:0.6rem 0.9rem;font-size:0.85rem;color:#fde68a;">
+            ⚠️ <strong>Do not run</strong> <code style="color:#fcd34d;">npx promptfoo@latest redteam run</code> directly — always use <code style="color:#fcd34d;">npm run redteam</code> to avoid stale cache errors.
+          </div>
         </div>
 
         <!-- Step 6 -->
@@ -484,7 +488,7 @@ const RESPONSE_SELECTOR = '.message-completed';</pre>
         <div class="persona-text">
           When the scan finishes, open the visual report:
           <br><br>
-          <code style="background:#0a0a14;padding:0.5rem 0.9rem;border-radius:6px;display:block;color:#34d399;font-size:0.88rem;">npx promptfoo@latest redteam report</code>
+          <code style="background:#0a0a14;padding:0.5rem 0.9rem;border-radius:6px;display:block;color:#34d399;font-size:0.88rem;">npm run report</code>
         </div>
 
         <!-- Discussion -->
