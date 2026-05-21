@@ -2,6 +2,10 @@
   "name": "promptfoo-playwright-redteam",
   "version": "1.0.0",
   "description": "Promptfoo red teaming via Playwright browser automation",
+  "scripts": {
+    "redteam": "rm -f redteam.yaml && npx promptfoo@latest redteam run",
+    "report": "npx promptfoo@latest redteam report"
+  },
   "dependencies": {
     "playwright": "^1.40.0"
   }
