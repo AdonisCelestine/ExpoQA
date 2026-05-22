@@ -21,7 +21,6 @@ redteam:
 
   strategies:
     - basic
-    - jailbreak
     - prompt-injection
 
   language: 'English'
