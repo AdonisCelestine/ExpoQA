@@ -5,31 +5,6 @@ A hands-on workshop exploring adversarial attacks against Large Language Models,
 
 ---
 
-## Workshop Overview
-
-| | |
-|---|---|
-| **Event** | ExpoQA 2026 |
-| **Format** | Hands-on / CTF-style |
-| **Duration** | ~2 hours |
-| **Difficulty** | Beginner – Intermediate |
-
----
-
-## Agenda
-
-| # | Session | Duration |
-|---|---------|----------|
-| 1 | Introduction — What is AI Red Teaming? | 10 min |
-| 2 | OWASP Top 10 for LLMs — Overview | 15 min |
-| 3 | **Exercise 1:** The Firewall vs The Jailbreaker | 40 min |
-| 4 | Break | 10 min |
-| 5 | **Exercise 2:** LLM Prompt Injection & Tool Extraction — Gandalf CTF | 30 min |
-| 6 | **Exercise 3:** Automated Red Teaming with Promptfoo + Playwright | 25 min |
-| 7 | Debrief & Q&A | 10 min |
-
----
-
 ## Exercises
 
 ### Exercise 1 — The Firewall vs The Jailbreaker
@@ -61,9 +36,9 @@ npm run report
 
 ## Workshop Materials
 
-| File | Description |
-|------|-------------|
-| [`index.html`](index.html) | Workshop instructions page (GitHub Pages) |
+| Resource | Description |
+|----------|-------------|
+| [adoniscelestine.github.io/ExpoQA](https://adoniscelestine.github.io/ExpoQA) | Live workshop instructions page |
 | [`promptfoo-playwright/`](promptfoo-playwright/) | Exercise 3 — Promptfoo + Playwright provider |
 
 ---
@@ -105,14 +80,3 @@ A research-focused collection of adversarial and manipulative prompts exploring 
 
 A comprehensive resource covering jailbreaks, prompt injection, prompt leaking, and custom GPT security from a cybersecurity practitioner's perspective. Includes categorised attack patterns, bypass techniques, and defensive counter-prompts — making it one of the most practical references for both red and blue teams.
 
----
-
-## Live Workshop Page
-
-The workshop instructions are published via GitHub Pages:
-
-**[adoniscelestine.github.io/ExpoQA](https://adoniscelestine.github.io/ExpoQA)**
-
----
-
-*ExpoQA 2026 · AI Red Teaming Workshop · Built with Claude*
