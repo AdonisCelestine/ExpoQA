@@ -54,28 +54,28 @@ An open-source LLM vulnerability scanner from NVIDIA. Garak probes models for a 
 
 ---
 
-### ⚔️ Microsoft PyRIT — Python Risk Identification Toolkit
+###  Microsoft PyRIT — Python Risk Identification Toolkit
 [github.com/microsoft/PyRIT](https://github.com/microsoft/PyRIT/tree/main/pyrit/datasets/jailbreak/templates)
 
 Microsoft's open-source framework for red teaming generative AI systems. The `jailbreak/templates` dataset is a goldmine of real-world adversarial prompt templates used in research — covering role-play bypasses, authority spoofing, fictional framing, and more. Essential reading for anyone building AI guardrails.
 
 ---
 
-### 🔓 L1B3RT4S — Jailbreak Prompt Collection
+### L1B3RT4S — Jailbreak Prompt Collection
 [github.com/elder-plinius/L1B3RT4S](https://github.com/elder-plinius/L1B3RT4S)
 
 A community-curated collection of jailbreak prompts targeting major LLMs. Maintained by the broader AI red teaming community, this repo documents the evolution of adversarial techniques in real time — from early DAN prompts to sophisticated multi-turn attacks. Useful for understanding what attackers are actually using in the wild.
 
 ---
 
-### 😈 Happy Prompts — Adversarial Prompt Research
+### Happy Prompts — Adversarial Prompt Research
 [github.com/davidegat/happy-prompts](https://github.com/davidegat/happy-prompts)
 
 A research-focused collection of adversarial and manipulative prompts exploring how tone, framing, and emotional language can influence LLM behaviour. A useful complement to more technical attack databases — highlights the social engineering dimension of prompt injection.
 
 ---
 
-### 🧠 Awesome GPT Super Prompting
+### Awesome GPT Super Prompting
 [github.com/CyberAlbSecOP/Awesome_GPT_Super_Prompting](https://github.com/CyberAlbSecOP/Awesome_GPT_Super_Prompting)
 
 A comprehensive resource covering jailbreaks, prompt injection, prompt leaking, and custom GPT security from a cybersecurity practitioner's perspective. Includes categorised attack patterns, bypass techniques, and defensive counter-prompts — making it one of the most practical references for both red and blue teams.
